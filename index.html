@@ -12,157 +12,152 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-     <script src="https://kit.fontawesome.com/63254f6c85.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="src/index.js"></script>
-        <link rel="stylesheet" href="src/styles.css">
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      </head>
+    <script
+      src="https://kit.fontawesome.com/63254f6c85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
   <body>
     <div class="container">
-        <div class="col-6">
-            <form>
-              <div class="input-group mb-3">
-                <input type="text"
-                 class="form-control"
-                 placeholder="Enter a city"
-                 aria-label="Searched city"
-                 aria-describedby="button-addon2"
-                 autocomplete="off";
-                 autofocus="on"
-                 id="city-input";>
-              <button class="btn btn-outline-secondary"
-                 type="button"
-                 id="search-button-head"
-                    input type ="submit"
-                    value = "search">Search
-              </button>
-              <button class="btn btn-outline-secondary"
-                 type="button"
-                 id="currentCityHead">Current city
-              </button>
-            </div>
-            </form>
-              </div>
-
-<div class="row">
-  <div class="container-left-side col-5">
-  <div class="col-6">
-      <div class="row">
-        <div class="city col-12" id="searchedCity"></div>
+      <div class="col-6">
+        <form>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter a city"
+              aria-label="Searched city"
+              aria-describedby="button-addon2"
+              autocomplete="off"
+              ;
+              autofocus="on"
+              id="city-input"
+              ;
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="search-button-head"
+              input
+              type="submit"
+              value="search"
+            >
+              Search
+            </button>
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="currentCityHead"
+            >
+              Current city
+            </button>
+          </div>
+        </form>
       </div>
+
       <div class="row">
-        <h6 id="date">  </h6>
+        <div class="container-left-side col-5">
+          <div class="col-6">
+            <div class="row">
+              <div class="city col-12" id="searchedCity"></div>
+            </div>
+            <div class="row">
+              <h6 id="date"></h6>
+            </div>
+            <span id="weather-description"> </span>
+            <br />
+            <br />
+            <br />
+            <i class="fas fa-thermometer-half">
+              Temperature:<span id="mainTemperature"></span> °C
+            </i>
+            <br />
+            <i class="fas fa-tint">Humidity: <span id="humidity"></span> % </i>
+            <br />
+            <i class="fas fa-wind">Wind speed: <span id="wind"></span> km/h </i>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <img
+              class="label"
+              src="src/images/SHMT.png"
+              alt="Slovak Hydrometeorological Institute"
+            />
+            <div class="linkSHI">
+              <a href="https://www.shmu.sk/sk/?page=1">
+                <br />
+                Slovak Institute
+              </a>
+            </div>
+          </div>
         </div>
-        <span id="weather-description">
-        </span>
-      </br>
-      </br>
-      </br>
-    <i class="fas fa-thermometer-half"> Temperature:<span id="mainTemperature"></span> °C </i>
-      <br>
-      <i  class="fas fa-tint">Humidity: <span id="humidity"></span> % </i>
-      </br>
-<i class="fas fa-wind">Wind speed: <span id="wind"></span> km/h  </i>
-</span>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-    <img class="label" src="src/images/SHMT.png" alt="Slovak Hydrometeorological Institute">
-   <div class="linkSHI ">
-    <a href="https://www.shmu.sk/sk/?page=1">
-      </br>
-      Slovak Institute
-  </a>
+        <div class="col-7 city_right_side">
+          <div class="container-header-side">
+            <div class="row">
+              <div class="col">Date</div>
+              <div class="col">Temperature</div>
+              <div class="col">Description</div>
+            </div>
+          </div>
+          <div class="container-date">
+            <div class="row">
+              <div class="col">26 Aug (Thu)</div>
+              <div class="col">13°C | 18°C</div>
+              <div class="col">
+                <i class="fas fa-cloud-showers-heavy"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container-date">
+            <div class="row">
+              <div class="col">27 Aug (Fri)</div>
+              <div class="col">11°C | 19°C</div>
+              <div class="col">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container-date">
+            <div class="row">
+              <div class="col">28 Aug (Sat)</div>
+              <div class="col">11°C | 20°C</div>
+              <div class="col">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container-date">
+            <div class="row">
+              <div class="col">29 Aug (Sun)</div>
+              <div class="col">12°C | 20°C</div>
+              <div class="col">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container-date">
+            <div class="row">
+              <div class="col">30 Aug (Mon)</div>
+              <div class="col">11°C | 21°C</div>
+              <div class="col">
+                <i class="fas fa-sun"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    <div class="col-7 city_right_side"> 
-        <div class="container-header-side">
-       <div class="row">
-         <div class="col">
-           Date
-         </div>
-         <div class="col">
-           Temperature
-         </div>
-             <div class="col">
-           Description
-         </div>
-       </div>
-     </div>
-     <div class="container-date"> 
-       <div class="row">
-         <div class="col">
-          26 Aug (Thu)
-         </div>
-         <div class="col">
-           13°C | 18°C
-         </div>
-         <div class="col">
-           <i class="fas fa-cloud-showers-heavy"></i>
-         </div>
-         
-       </div>
-       </div>
-       <div class="container-date">
-       <div class="row">
-         <div class="col">
-         27 Aug (Fri)
-         </div>
-         <div class="col">
-           11°C | 19°C
-         </div>
-         <div class="col">
-           <i class="fas fa-cloud-sun"></i>
-         </div>
-       </div>
-       </div>
-       <div class="container-date">
-       <div class="row">
-         <div class="col">
-           28 Aug (Sat)
-         </div>
-         <div class="col">
-           11°C | 20°C
-         </div>
-         <div class="col">
-          <i class="fas fa-cloud-sun"></i>
-         </div>
-     </div>
-     </div>
-     <div class="container-date">
-        <div class="row">
-         <div class="col">
-           29 Aug (Sun) 
-         </div>
-         <div class="col">
-         12°C | 20°C
-         </div>
-         <div class="col">
-           <i class="fas fa-cloud-sun"></i>
-         </div>
-       </div>
-       </div>
-       <div class="container-date">
-       <div class="row">
-         <div class="col">
-           30 Aug (Mon)
-         </div>
-         <div class="col">
-          11°C | 21°C
-         </div>
-         <div class="col">
-      <i class="fas fa-sun"></i>
-         </div>
-       </div>
-     </div>
-     </div>
-     </div>
-    </div>
- <script src="src/index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
