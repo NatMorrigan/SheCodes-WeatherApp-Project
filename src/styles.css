@@ -14,14 +14,6 @@
     font-size: 40px;
     font-family: "Times New Roman", Times, serif;
   }
-  a {
-    color: black;
-  }
-  a:hover {
-    color: #fff;
-    transition: ease-in-out;
-  }
-  
   .city {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
@@ -39,18 +31,6 @@
   }
   h6 {
     size: 20px;
-  }
-  img {
-    size: 10px;
-    float: left;
-    margin-left: 10px;
-    margin-right: 15px;
-  }
-  .label {
-    float: unset;
-  }
-  .linkSHI {
-    color: #fff;
   }
   .city_right_side {
     box-sizing: border-box;
@@ -73,4 +53,9 @@
     margin: 10px;
     font-family: "Roboto Mono", monospace;
   }
-  
+  footer{
+    color:black;
+    padding: 5px;
+    margin:0 auto;
+    display:block;
+  }
