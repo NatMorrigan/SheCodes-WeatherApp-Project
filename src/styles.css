@@ -1,5 +1,6 @@
 .container {
     background-color: #074171;
+    border-radius: 5px;
   }
   .searchbutton {
     min-width: auto;
@@ -19,10 +20,6 @@
     font-size: 35px;
     font-style: oblique;
     margin: 2px;
-  }
-  .country {
-    color: #c3e2f7;
-    font-size: 30px;
   }
   .current-weather {
     font-size: 20px;
@@ -57,4 +54,4 @@
     color:black;
     padding: 5px;
   }
-  
+ 
