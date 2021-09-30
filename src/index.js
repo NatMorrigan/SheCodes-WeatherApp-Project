@@ -37,6 +37,10 @@ function formatDate(date) {
         "src", 
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       );
+      iconElement.setAttribute(
+        "alt",
+        `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      )
   }
   function searchCity(city) {
     let units = "metric";
