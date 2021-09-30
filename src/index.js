@@ -33,7 +33,7 @@ function formatDate(date) {
     );
     document.querySelector("#weather-description").innerHTML =
       response.data.weather[0].main;
-    iconElement.setAttribute(
+  iconElement.setAttribute(
         "src", 
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       );
