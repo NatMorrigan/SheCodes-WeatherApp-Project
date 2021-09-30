@@ -33,6 +33,10 @@ function formatDate(date) {
     );
     document.querySelector("#weather-description").innerHTML =
       response.data.weather[0].main;
+    iconElement.setAttribute(
+        "src", 
+        `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
   }
   function searchCity(city) {
     let units = "metric";
@@ -65,6 +69,9 @@ function formatDate(date) {
   
   let currentLocationButton = document.querySelector("#currentCityHead");
   currentLocationButton.addEventListener("click", getCurrentLocation);
+  
+  let iconElement = document.querySelector ("#icon");
+ 
   
   searchCity("Lviv");
   
