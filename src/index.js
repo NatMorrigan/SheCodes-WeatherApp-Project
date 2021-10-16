@@ -22,6 +22,25 @@ function formatDate(date) {
   
     return `${day} ${hours}:${minutes}`;
   }
+  function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML="";
+    let days =["Sun","Mon","Tue","Wed","Thu", "Fri"];
+    days.forEach(function (day){
+      forecastHTML = forecastHTML + `
+      <div class="container-date">
+        <div class="row">
+          <div class="col" id="dayOne">26 Aug (${day})</div>
+          <div class="col" id="tempOne">13°C | 18°C</div>
+          <div class="col" id="weatherIcon">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </div>
+        </div>
+      </div>
+      `;
+    });
+    forecastElement.innerHTML = forecastHTML;
+  }
   function displayWeatherCondition(response) {
     document.querySelector("#searchedCity").innerHTML = response.data.name;
     document.querySelector("#mainTemperature").innerHTML = Math.round(
@@ -42,7 +61,7 @@ function formatDate(date) {
         "alt",
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       )
-  }
+    }
   function searchCity(city) {
     let units = "metric";
     let apiKey = "ab8e7ef210556986d1c9a75d6007b825";
@@ -102,3 +121,4 @@ function formatDate(date) {
 
   let celciusTemperature = null;  
   searchCity("Lviv");
+  displayForecast();
