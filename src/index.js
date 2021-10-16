@@ -66,7 +66,8 @@ function formatDate(date) {
   iconElement.setAttribute(
         "alt",
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-      )  
+      ) 
+      getForecast(response.data.coordinates); 
     }
   function searchCity(city) {
     let units = "metric";
