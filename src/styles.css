@@ -50,10 +50,6 @@
     margin: 10px;
     font-family: "Roboto Mono", monospace;
   }
-  footer{
-    color:black;
-    padding: 5px;
-  }
  .active {
    color:black;
    cursor: default;
@@ -68,4 +64,8 @@
  }
  #celsiusTemp{
    color:black;
+ }
+ small {
+   display: block;
+   margin: 0 auto;
  }
