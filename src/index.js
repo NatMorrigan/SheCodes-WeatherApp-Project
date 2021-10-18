@@ -65,6 +65,8 @@ function formatDate(date) {
       );
   iconElement.setAttribute(
         "alt", response.data.weather[0].description); 
+
+        console.log(response.data);
       getForecast(response.data.coordinates); 
     }
   function searchCity(city) {
