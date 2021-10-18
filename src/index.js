@@ -23,6 +23,7 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
   }
   function displayForecast(response){
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML="";
     let days =["Sun","Mon","Tue","Wed","Thu", "Fri"];
@@ -128,4 +129,4 @@ function formatDate(date) {
 
   let celciusTemperature = null;  
   searchCity("Lviv");
-  displayForecast();
+ 
