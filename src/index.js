@@ -22,6 +22,12 @@ function formatDate(date) {
   
     return `${day} ${hours}:${minutes}`;
   }
+  function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[day];
+  }
   function displayForecast(response){
     let forecast = response.data.daily;
 
@@ -32,7 +38,7 @@ function formatDate(date) {
       forecastHTML = forecastHTML + `
       <div class="container-date">
         <div class="row">
-          <div class="col" id="weather-forecast-date">(${forecastDay.dt})</div>
+          <div class="col" id="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
           <div class="col" id="weather-forecast-temperatures"> 
              <span class="weather-forecast-temperature-min"> ${forecastDay.temp.min}°</span> | <span class="weather-forecast-temperature-max"> ${forecastDay.temp.max}°</span> 
           </div>
