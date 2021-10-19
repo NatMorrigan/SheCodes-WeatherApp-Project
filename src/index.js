@@ -51,13 +51,12 @@ function formatDate(date) {
             alt="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].description
                 }@2x.png"
-            width="42"
+            width="50"
             />
           </div>
         </div>
       </div>
       `;}
-      
     });
     forecastElement.innerHTML = forecastHTML;
   }
