@@ -38,8 +38,12 @@ function formatDate(date) {
           </div>
           <div class="col" id="weather-forecast-icon">
             <img  
-            src="https://openweathermap.org/img/wm/${forecastDay.weather[0].icon}@2x.png"
-            alt=""
+            src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
+            alt="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].description
+                }@2x.png"
             width="42"
             />
           </div>
