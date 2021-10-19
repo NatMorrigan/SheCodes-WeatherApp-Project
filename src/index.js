@@ -34,13 +34,14 @@ function formatDate(date) {
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML="";
     
-    forecast.forEach(function (forecastDay){
+    forecast.forEach(function (forecastDay, index){
+      if (index <5) {
       forecastHTML = forecastHTML + `
       <div class="container-date">
         <div class="row">
           <div class="col" id="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
           <div class="col" id="weather-forecast-temperatures"> 
-             <span class="weather-forecast-temperature-min"> ${forecastDay.temp.min}°</span> | <span class="weather-forecast-temperature-max"> ${forecastDay.temp.max}°</span> 
+             <span class="weather-forecast-temperature-min"> ${Math.round(forecastDay.temp.min)}°</span> | <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temp.max)}°</span> 
           </div>
           <div class="col" id="weather-forecast-icon">
             <img  
@@ -55,7 +56,8 @@ function formatDate(date) {
           </div>
         </div>
       </div>
-      `;
+      `;}
+      
     });
     forecastElement.innerHTML = forecastHTML;
   }
