@@ -108,24 +108,6 @@ function formatDate(date) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
-
-  function showFahrenheitTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#mainTemperature");
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active"); 
-    let fahrenheitTemperature = (celciusTemperature*9)/5+32;
-    temperatureElement.innerHTML = Math.round (fahrenheitTemperature);
-  }
-
-  function showCelsiusTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#mainTemperature");
-    fahrenheitLink.classList.remove("active");
-    celsiusLink.classList.add("active");
-    temperatureElement.innerHTML = Math.round (celciusTemperature);
-  }
-  
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
   dateElement.innerHTML = formatDate(currentTime);
@@ -137,13 +119,6 @@ function formatDate(date) {
   currentLocationButton.addEventListener("click", getCurrentLocation);
   
   let iconElement = document.querySelector ("#icon");
-
-  let fahrenheitLink=document.querySelector("#fahrenheit");
-  fahrenheitLink.addEventListener ("click", showFahrenheitTemperature);
-
-  let celsiusLink=document.querySelector("#celsiusTemp");
-  celsiusLink.addEventListener ("click", showCelsiusTemperature);
-
   let celciusTemperature = null;  
   searchCity("Lviv");
  
