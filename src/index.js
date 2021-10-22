@@ -114,6 +114,7 @@ function formatDate(date) {
   
   let searchForm = document.querySelector("form");
   searchForm.addEventListener("submit", handleSubmit);
+  searchForm.addEventListener("click", handleSubmit);
   
   let currentLocationButton = document.querySelector("#currentCityHead");
   currentLocationButton.addEventListener("click", getCurrentLocation);
